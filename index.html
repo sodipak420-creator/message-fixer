@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <meta
+    name="description"
+    content="Create emojis that can speak your messages."
+  />
+
+  <title>VoiceEmoji 🎤</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+    <header class="topbar">
+      <div>
+        <div class="brand">VoiceEmoji 🎤</div>
+        <div class="tagline">Make emojis talk.</div>
+      </div>
+
+      <button id="stopBtn" class="stop-btn" title="Stop speaking">
+        ■
+      </button>
+    </header>
+
+
+    <!-- EMOJI PREVIEW -->
+    <section class="preview-card">
+
+      <div id="previewEmoji" class="preview-emoji">
+        😀
+      </div>
+
+      <div class="preview-info">
+        <div class="preview-title">Your Voice Emoji</div>
+        <div id="previewStatus" class="preview-status">
+          Ready
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- EMOJI SELECTOR -->
+    <section class="section">
+
+      <div class="section-title">
+        Choose Emoji
+      </div>
+
+      <div id="emojiGrid" class="emoji-grid"></div>
+
+    </section>
+
+
+    <!-- MESSAGE -->
+    <section class="section">
+
+      <div class="section-title">
+        What should it say?
+      </div>
+
+      <textarea
+        id="message"
+        maxlength="500"
+        placeholder="Type something..."
+      ></textarea>
+
+      <div class="character-count">
+        <span id="charCount">0</span>/500
+      </div>
+
+    </section>
+
+
+    <!-- VOICE -->
+    <section class="section">
+
+      <div class="section-title">
+        Choose Voice
+      </div>
+
+      <select id="voiceSelect">
+        <option value="">Loading voices...</option>
+      </select>
+
+    </section>
+
+
+    <!-- CONTROLS -->
+    <section class="section">
+
+      <div class="control-row">
+
+        <div class="control">
+          <label for="speed">
+            Speed
+            <span id="speedValue">1.0×</span>
+          </label>
+
+          <input
+            id="speed"
+            type="range"
+            min="0.5"
+            max="2"
+            step="0.1"
+            value="1"
+          />
+        </div>
+
+
+        <div class="control">
+          <label for="pitch">
+            Pitch
+            <span id="pitchValue">1.0</span>
+          </label>
+
+          <input
+            id="pitch"
+            type="range"
+            min="0"
+            max="2"
+            step="0.1"
+            value="1"
+          />
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MAIN BUTTON -->
+    <button id="speakBtn" class="speak-btn">
+      🔊 Speak Emoji
+    </button>
+
+
+    <!-- CREATE -->
+    <button id="createBtn" class="create-btn">
+      ✨ Create Voice Emoji
+    </button>
+
+
+    <!-- SAVED EMOJIS -->
+    <section class="section saved-section">
+
+      <div class="section-heading-row">
+        <div class="section-title">
+          My Voice Emojis
+        </div>
+
+        <button id="clearBtn" class="small-btn">
+          Clear
+        </button>
+      </div>
+
+      <div id="savedList" class="saved-list"></div>
+
+    </section>
+
+
+    <!-- SHARE MODAL -->
+    <div id="shareModal" class="modal hidden">
+
+      <div class="modal-content">
+
+        <button id="closeModal" class="close-modal">
+          ×
+        </button>
+
+        <div id="shareEmoji" class="share-emoji">
+          😀
+        </div>
+
+        <h2>Voice Emoji Created! 🎉</h2>
+
+        <p id="shareText">
+          Your Voice Emoji is ready.
+        </p>
+
+        <div class="share-actions">
+
+          <button id="copyBtn">
+            📋 Copy
+          </button>
+
+          <button id="shareBtn">
+            📤 Share
+          </button>
+
+        </div>
+
+        <div class="share-note">
+          Version 1 stores your Voice Emojis on this device.
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
