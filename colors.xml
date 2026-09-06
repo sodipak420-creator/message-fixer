@@ -1,0 +1,7 @@
+<resources>
+    <color name="mf_background">#F5F5F7</color>
+    <color name="mf_card">#FFFFFF</color>
+    <color name="mf_text">#1D1D1F</color>
+    <color name="mf_muted">#6B6B70</color>
+    <color name="mf_accent">#2563EB</color>
+</resources>

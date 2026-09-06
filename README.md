@@ -1,57 +1,19 @@
-# 🎤 VoiceEmoji
+# Message-Fixer — GitHub-ready Android project
 
-Make emojis talk.
+This repository contains the real Android Message-Fixer keyboard plus a GitHub Pages web demo.
 
-VoiceEmoji is a simple web application that lets users create custom voice emojis.
+## What to upload
+Upload **everything in this folder** to your GitHub `message-fixer` repository.
 
-## Features
+## Build and download flow
+1. Push the project to the `main` branch.
+2. GitHub Actions runs `Build and Release Message-Fixer APK`.
+3. The workflow builds `message-fixer.apk`.
+4. It creates a GitHub Release containing the APK.
+5. The website's **Download Message-Fixer APK** button points to the latest release APK.
 
-- 😀 Choose an emoji
-- ✍️ Write any message
-- 🎙️ Choose a device voice
-- ⚡ Change speaking speed
-- 🎵 Change pitch
-- 🔊 Speak the message
-- ✨ Save Voice Emojis
-- 📤 Share Voice Emoji information
-- 💾 Local device storage
-- 📱 Mobile friendly
-- 🌐 No backend required
-- 🔑 No API key required
+## Android app
+The Android project is a real `InputMethodService` keyboard. Saved Voice Emojis are stored locally in the Android app and shown in the Message-Fixer keyboard.
 
-## Technology
-
-- HTML
-- CSS
-- JavaScript
-- Web Speech API
-- LocalStorage
-
-## Run
-
-Open `index.html` in a modern browser.
-
-## GitHub Pages
-
-Push the files to a GitHub repository and enable GitHub Pages.
-
-## Important
-
-Version 1 uses the browser/device Text-to-Speech engine.
-
-A future version can generate actual audio files and create a real Voice Emoji sharing format.
-
-## Future Features
-
-- Android keyboard
-- iPhone keyboard
-- Actual audio attachments
-- QR/share links
-- User accounts
-- Cloud Voice Emoji library
-- AI voices
-- Custom voice creation
-- Voice Emoji packs
-- Animated talking emojis
-- WhatsApp/Telegram compatible sharing
-- Voice Emoji marketplace
+## Important limitation
+The keyboard can insert text/emoji into apps and play the saved voice. It cannot force another app such as WhatsApp or Instagram to accept a custom combined "emoji + audio" message type through normal keyboard input APIs.
