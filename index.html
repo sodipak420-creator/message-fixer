@@ -9,10 +9,7 @@
 <body>
   <header>
     <h1>Message-Fixer</h1>
-    <p>Create Voice Emojis and use them in your own Android keyboard.</p>
-    <a class="download" href="https://github.com/sodipak420-creator/message-fixer/releases/latest/download/message-fixer.apk">
-      📱 Download Message-Fixer APK
-    </a>
+    <p>Create your Voice Emojis.</p>
   </header>
 
   <div class="ad-container">
@@ -34,22 +31,26 @@
       <label>Emoji</label>
       <input id="emoji" value="😂" maxlength="4">
       <label>Message</label>
-      <textarea id="message" placeholder="Type the message..."></textarea>
+      <textarea id="message" placeholder="Type your message..."></textarea>
+
       <div class="controls">
         <label>Speed <input id="speed" type="range" min=".5" max="2" step=".1" value="1"></label>
         <label>Pitch <input id="pitch" type="range" min="0" max="2" step=".1" value="1"></label>
       </div>
+
       <div class="buttons">
         <button id="speak">🔊 Speak</button>
         <button id="save">💾 Save</button>
         <button id="copy">📋 Copy</button>
       </div>
     </section>
+
     <section class="card">
       <h2>My Voice Emojis</h2>
       <div id="list"></div>
     </section>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
